@@ -3,7 +3,7 @@
 Бикметов Э.Б. = 40, Кондрашов М.С. = 40, Бычков Кирилл Алексеевич = 35"""
 import urllib.request
 with open('input.txt') as f_in:
-    with open('output.txt', 'w+') as f_out:
+    with open('output.txt', 'w') as f_out:
         for line in f_in:
             f = urllib.request.urlopen(line)
             s = f.read()
