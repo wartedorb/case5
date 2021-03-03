@@ -22,4 +22,5 @@ with open('input.txt') as f_in:
             INT = text[text.find('>', INT_help) + 25:text.find('</th', INT_help) - 22]
             PR_help = text.find('passingPasserRating')
             PR = float(text[text.find('>', PR_help) + 25:text.find('</th', PR_help) - 22])
-            print('{:<20s}{:<7s}{:<7s}{:<7s}{:<7s}{:<7s}{:<7}'.format(name, COMP, ATT, YDS, TD, INT, PR), file=f_out)
+            pr = format(PR, '.2f')
+            print('{:<20s}{:<7s}{:<7s}{:<7s}{:<7s}{:<7s}{:<7}'.format(name, COMP, ATT, YDS, TD, INT, pr), file=f_out)
